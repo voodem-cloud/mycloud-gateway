@@ -1,0 +1,16 @@
+server:
+  port: 9090
+spring:
+  application:
+    name: mycloud-gateway
+  cloud:
+    gateway:
+      routes:
+      - id: mycloudGateway
+        uri:
+          localhost:8080
+        predicates:
+        - Path=/profiles/
+logging:
+  level:
+    org.springframework.security: INFO
